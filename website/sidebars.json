@@ -1,0 +1,8 @@
+{
+  "docs": {
+    "setup": ["cq-ts/intro"],
+    "simple guide": [
+      "cq-ts/simple-guide"
+    ]
+  }
+}

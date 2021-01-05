@@ -1,0 +1,42 @@
+{
+  "name": "cq-ts-http",
+  "version": "2.0.0-alpha.1",
+  "description": "Simple Command/Query definition for fullstack safety.",
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "repository": "https://github.com/fes300/cq-ts/tree/master/packages/cq-ts-http",
+  "bugs": {
+    "url": "https://github.com/fes300/cq-ts/issues?q=is%3Aopen+is%3Aissue+project%3Afes300%2Fcq-ts-http%2F3"
+  },
+  "author": "Federico Sordillo <federicosordillo@gmail.com>",
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rm -rf ./lib && tsc",
+    "type-test": "jest --config=jest.typetests-config.js",
+    "runtime-test": "jest --config=jest.config.js",
+    "test": "yarn type-test && yarn runtime-test"
+  },
+  "peerDependencies": {
+    "fp-ts": "^2.0.0",
+    "io-ts": "^2.2.7"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.7",
+    "dts-jest": "^23.3.0",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.1.1",
+    "typescript": "^4.1.1-rc"
+  },
+  "dependencies": {
+    "io-ts-types": "^0.5.8",
+    "monocle-ts": "^2.3.3",
+    "newtype-ts": "^0.3.4",
+    "ts-shared": "^1.0.1",
+    "typelevel-ts": "^0.4.0"
+  }
+}

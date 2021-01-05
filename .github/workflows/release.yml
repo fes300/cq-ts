@@ -1,0 +1,46 @@
+# name: Release
+
+# on:
+#   push:
+#     tags:
+#       - 'RELEASE-*'
+
+# jobs:
+#   release:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#         with:
+#           # pulls all commits (needed for lerna / semantic release to correctly version)
+#           fetch-depth: '0'
+
+#       - uses: actions/cache@v2
+#         with:
+#           path: |
+#             **/node_modules
+#           key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
+
+#       # pulls all tags (needed for lerna / semantic release to correctly version)
+#       - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+
+#       - name: install dependencies
+#         run: yarn bootstrap
+
+#       - name: build
+#         run: yarn build
+
+#       - name: test
+#         run: yarn test
+
+#       - name: git login
+#         uses: oleksiyrudenko/gha-git-credentials@v2
+#         with:
+#           token: '${{ secrets.GITHUB_TOKEN }}'
+
+#       - name: release
+#         env:
+#           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+#         run: |
+#           echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> .npmrc
+#           git checkout master
+#           yarn release

@@ -1,0 +1,22 @@
+{
+  "packages": ["packages/*"],
+  "version": "0.0.1",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "command": {
+    "publish": {
+      "ignoreChanges": [
+        "**/CHANGELOG.md",
+        "**/node_modules/**",
+        "**/package.json",
+        "**/*.md",
+        "**/*.spec.*",
+        "**/*.stories.*",
+        "**/yarn.lock"
+      ],
+      "conventionalCommits": true,
+      "message": "chore(release): publish",
+      "registry": "https://registry.npmjs.org"
+    }
+  }
+}

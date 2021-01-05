@@ -1,0 +1,17 @@
+{
+  "name": "shared",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Federico Sordillo <federicosordillo@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.1.1-rc"
+  },
+  "dependencies": {
+    "fp-ts": "^2.8.2",
+    "io-ts": "^2.2.10",
+    "io-ts-types": "^0.5.10",
+    "cq-ts-http": "^1.5.0-alpha.19"
+  }
+}
